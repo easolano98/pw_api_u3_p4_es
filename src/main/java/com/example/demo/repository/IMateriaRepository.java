@@ -8,4 +8,10 @@ public interface IMateriaRepository {
 	
 	public void insertar(Materia materia);
 	
+	public void actualizar(Materia materia);
+	
+	public Materia buscarPorId(Integer id);
+	
+	public void eliminar(Integer id);
+	
 }

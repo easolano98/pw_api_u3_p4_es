@@ -24,4 +24,22 @@ public class MateriaService implements IMateriaService {
 		this.iMateriaRepository.insertar(materia);
 	}
 
+	@Override
+	public void actualizar(Materia materia) {
+		// TODO Auto-generated method stub
+		this.iMateriaRepository.actualizar(materia);
+	}
+
+	@Override
+	public Materia buscarPorId(Integer id) {
+		// TODO Auto-generated method stub
+		return this.iMateriaRepository.buscarPorId(id);
+	}
+
+	@Override
+	public void borrar(Integer id) {
+		// TODO Auto-generated method stub
+		this.iMateriaRepository.eliminar(id);
+	}
+
 }

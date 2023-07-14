@@ -30,4 +30,22 @@ public class MateriaRespository implements IMateriaRepository {
 		this.entityManager.persist(materia);
 	}
 
+	@Override
+	public void actualizar(Materia materia) {
+		// TODO Auto-generated method stub
+		this.entityManager.merge(materia);
+	}
+
+	@Override
+	public Materia buscarPorId(Integer id) {
+		// TODO Auto-generated method stub
+		return this.entityManager.find(Materia.class, id);
+	}
+
+	@Override
+	public void eliminar(Integer id) {
+		// TODO Auto-generated method stub
+		this.entityManager.remove(this.buscarPorId(id));
+	}
+
 }
